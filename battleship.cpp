@@ -44,6 +44,7 @@ int main(){
 			gameBoard[x][y] = false;
 			cout << "----Hit!----" << endl;
 			visualShownToUser[x][y] = "X";
+			// visual representation of the board
 			for (int i = 0; i < 5; i++) {
 				cout << "|";
 				for (int j = 0; j < 5; j++) {
@@ -51,12 +52,11 @@ int main(){
 				}
 				cout << endl;
 			}
-			cout << endl;
 			hit++;
-			numberOfTurns++;
 		} else {
 			cout << "----You missed!----" << endl;
 			visualShownToUser[x][y] = "O";
+			// visual representation of the board
 			for (int i = 0; i < 5; i++) {
 				cout << "|";
 				for (int j = 0; j < 5; j++) {
@@ -64,9 +64,9 @@ int main(){
 				}
 				cout << endl;
 			}
-			cout << endl;
-			numberOfTurns++;
-		}	
+		}
+		cout << endl;
+		numberOfTurns++;
 	}
 	cout << endl << "Thanks for playing! You won in " << numberOfTurns << " turns" << endl;
 	return 0;
